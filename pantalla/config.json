@@ -1,0 +1,29 @@
+{
+    "symbol": "BTCUSDT",
+    "timeframe": "1m",
+    "limit": 100,
+    "RSI": {
+        "periodo": 14,
+        "temporalidad": "1h",
+        "tiempo_espera": 5
+    },
+    "MACD": {
+        "rapido": 12,
+        "lento": 26,
+        "signal": 100,
+        "temporalidad": "1h",
+        "tiempo_espera": 5,
+        "limit": 100
+    },
+    "B.Bolinger": {
+        "periodo": 20,
+        "desviacion": 2,
+        "temporalidad": "1h",
+        "tiempo_espera": 5
+    },
+    "VRVP": {
+        "periodo": 14,
+        "temporalidad": "1h",
+        "tiempo_espera": 5
+    }
+}
