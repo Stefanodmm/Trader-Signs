@@ -14,4 +14,4 @@ Programa para que puedas automatizar tu estrategia de trading y dejarla funciona
 ## Version 3:
 * Verificacion de funcionamiento de señal B.Bolinger.
 * *Nota:* La señal de banda de bolinger, cree un rango para fasilitar su lectura, el rango es de -11 a 11, en donde -11 es por debajo de la banda inferior, -10 es sobre el precio de la banda inferior, 0 es en el medio de las dos, 10 es en el precio de la banda superior y 11 es por por encima de la banda superior.
-  
+* *Nota:* Me falta arreglar vrvp  
