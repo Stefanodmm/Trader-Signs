@@ -17,6 +17,6 @@ Programa para que puedas automatizar tu estrategia de trading y dejarla funciona
 * *Nota:* Me falta arreglar vrvp  
 ## Version 4:
 * Arreglado VRVP
-## Codigo_Señal TradingVew:
+## Version Codigo_Señal TradingVew:
 * Es el codigo de la señal de TradingVew para mostrar graficamente el funcionamiento ESTANDAR de la rentabilidad de convinar estas señales con sus parametros PREDETERMINADOS.
 * *Nota:* Casi ningun trader profecional, mantiene de manera fija las configuraciones predeterminadas y toman otros factores para tomar las deciciones de entradas en el mercado, como patrones particulares de esa moneda u noyicias a nivel mundial que puedan afectar esa moneda.
