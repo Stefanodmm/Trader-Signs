@@ -1,0 +1,35 @@
+//@version=5
+strategy("Estrategia de Trading Basada en Señales", overlay=true)
+
+// Estrategia diseñada para randos a largo plaso a partir de temporalidad de 1h 
+//(recomendado temporalidades de 4h o 1d por % de ganancias rentables, temporalidad 1h con 100% de rentabilidad pero porcentaje relativamente bajo)
+
+// Parámetros de entrada
+rsi_period = input(14, title="Periodo RSI")
+rsi_overbought = input(70, title="Sobrecompra RSI")
+rsi_oversold = input(30, title="Sobreventa RSI")
+
+macd_short = input(12, title="MACD - Ventana Corta")
+macd_long = input(26, title="MACD - Ventana Larga")
+macd_signal = input(9, title="MACD - Ventana de Señal")
+
+// Cálculo del RSI
+rsi = ta.rsi(close, rsi_period)
+
+// Cálculo del MACD
+[macdLine, signalLine, _] = ta.macd(close, macd_short, macd_long, macd_signal)
+
+// Lógica de compra y venta
+buy_signal = (rsi < rsi_oversold) and (macdLine > signalLine)
+sell_signal = (rsi > rsi_overbought) and (macdLine < signalLine)
+
+// Ejecutar órdenes
+if (buy_signal)
+    strategy.entry("Compra", strategy.long)
+
+if (sell_signal)
+    strategy.entry("Venta", strategy.short)
+
+// Visualización de señales en el gráfico
+plotshape(series=buy_signal, location=location.belowbar, color=color.green, style=shape.labelup, text="Comprar")
+plotshape(series=sell_signal, location=location.abovebar, color=color.red, style=shape.labeldown, text="Vender")
