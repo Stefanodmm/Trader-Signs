@@ -20,5 +20,5 @@ Programa para que puedas automatizar tu estrategia de trading y dejarla funciona
 ## Version Codigo_Señal TradingVew:
 * Es el codigo de la señal de TradingVew para mostrar graficamente el funcionamiento ESTANDAR de la rentabilidad de convinar estas señales con sus parametros PREDETERMINADOS.
 * *Nota:* Casi ningun trader profecional, mantiene de manera fija las configuraciones predeterminadas y toman otros factores para tomar las deciciones de entradas en el mercado, como patrones particulares de esa moneda u noyicias a nivel mundial que puedan afectar esa moneda.
-3# Version 5:
+## Version 5:
 * integre "espera inteligente", en vez de esperar un tiempo x, al recomendar una accion de compra o venta, espera a que comiense la sigiente vela de la temporalidad elegida.
