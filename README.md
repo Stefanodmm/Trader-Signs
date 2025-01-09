@@ -22,3 +22,6 @@ Programa para que puedas automatizar tu estrategia de trading y dejarla funciona
 * *Nota:* Casi ningun trader profecional, mantiene de manera fija las configuraciones predeterminadas y toman otros factores para tomar las deciciones de entradas en el mercado, como patrones particulares de esa moneda u noyicias a nivel mundial que puedan afectar esa moneda.
 ## Version 5:
 * integre "espera inteligente", en vez de esperar un tiempo x, al recomendar una accion de compra o venta, espera a que comiense la sigiente vela de la temporalidad elegida.
+
+## Diagrama de clases:
+//www.plantuml.com/plantuml/png/ZLB1RjGm4BtlLrWzfQBzWJsWqdBf0GaLgHojYJr91yPsDBQ34EBVSHplRgf0HMupxysRzoQ-YmaaPSS7mn2Z-ahUXX_grq6LxnsOH3FgIAC7ZaV55DEAf32EZBeI8A7jp0kQxsYFgW-1RvGFhXSygfZaUfqWJuP0kbP2BoGQlkMOC9RcxqDpyEY7yBykGf_Ge-X4wAQWCKueq5sheoBVA1OJYYCFeWLDSEWj60fUZyiaSFUgYqr-aIZMLuayMKYegHWxkJV09ZESDxz0JB0up8I-S6VaYuzpj8VW1nfFiKojz42CcsL6iCYkM9PgQdkTfo-FRVxYGIBLNGC7I7jC3zcRpd28ctIDVDRzzE7XuqxOWR5T_EdwmDNXZKhaS11ms6ecHsb9MJLJdXWlclU1cVo8SW_UnfrwVuAxy-o_6Fi8Dsf2eM33ihnK5kDCzLejsb_yF3yzVzwvc6MUgW5BfjwZlRtRs_URfrZmAvUnP8QhGsitLlkh2oF7FLf-s0ArVJjukVjR-EiRli5SqstnE_GsE_u3
