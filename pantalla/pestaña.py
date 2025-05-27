@@ -11,6 +11,43 @@ from rsi_calculo import calcular_rsi  # Importar la función calcular_rsi
 from bb_calculo import calcular_bollinger  # Importar la función calcular_bollinger
 from vrvp_calculo import calcular_vrvp  # Importar la función calcular_vrvp
 
+# Ruta del archivo de configuración
+config_file = 'config.json'
+
+def crear_configuracion():
+    # Crear un archivo de configuración con valores predeterminados
+    default_config = {
+        "RSI": {"periodo": 14, "temporalidad": "1d", "tiempo_espera": 5},
+        "MACD": {"rapido": 12, "lento": 26, "signal": 9, "temporalidad": "1d", "tiempo_espera": 5},
+        "B.Bolinger": {"periodo": 20, "desviacion": 2, "temporalidad": "1d", "tiempo_espera": 5},
+        "VRVP": {
+            "periodo": 14,
+            "temporalidad": "1d",
+            "tiempo_espera": 5,
+            "num_niveles": 24,
+            "va_porcentaje": 70,
+            "lookback_period": 100
+        }
+    }
+    with open(config_file, 'w') as f:
+        json.dump(default_config, f, indent=4)
+    print(f"Archivo de configuración '{config_file}' creado con valores predeterminados.")
+
+# Verificar si el archivo de configuración existe
+if not os.path.exists(config_file):
+    crear_configuracion()
+else:
+    # Verificar si la configuración tiene la estructura correcta
+    try:
+        with open(config_file) as f:
+            config = json.load(f)
+            if "VRVP" not in config or "num_niveles" not in config["VRVP"]:
+                print("Actualizando configuración...")
+                crear_configuracion()
+    except Exception as e:
+        print(f"Error al leer la configuración: {str(e)}")
+        crear_configuracion()
+
 # Validar imports
 try:
     import sys  # Importar sys para salir de la aplicación
@@ -35,22 +72,6 @@ except ImportError as e:
     msg.setWindowTitle("Error de Importación")
     msg.exec_()
     sys.exit(1)  # Salir de la aplicación
-
-# Ruta del archivo de configuración
-config_file = 'config.json'
-
-# Verificar si el archivo de configuración existe
-if not os.path.exists(config_file):
-    # Crear un archivo de configuración con valores predeterminados
-    default_config = {
-        "RSI": {"periodo": 14, "temporalidad": "1d", "tiempo_espera": 5},
-        "MACD": {"rapido": 12, "lento": 26, "signal": 9, "temporalidad": "1d", "tiempo_espera": 5},
-        "B.Bolinger": {"periodo": 20, "desviacion": 2, "temporalidad": "1d", "tiempo_espera": 5},
-        "VRVP": {"num_niveles": 24, "va_porcentaje": 70, "temporalidad": "1d", "tiempo_espera": 5}
-    }
-    with open(config_file, 'w') as f:
-        json.dump(default_config, f, indent=4)
-    print(f"Archivo de configuración '{config_file}' creado con valores predeterminados.")
 
 class InfoWindow(QtWidgets.QWidget):
     def __init__(self, active_signals):
