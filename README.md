@@ -22,3 +22,6 @@ Programa para que puedas automatizar tu estrategia de trading y dejarla funciona
 * *Nota:* Casi ningun trader profecional, mantiene de manera fija las configuraciones predeterminadas y toman otros factores para tomar las deciciones de entradas en el mercado, como patrones particulares de esa moneda u noyicias a nivel mundial que puedan afectar esa moneda.
 ## Version 5:
 * integre "espera inteligente", en vez de esperar un tiempo x, al recomendar una accion de compra o venta, espera a que comiense la sigiente vela de la temporalidad elegida.
+como patrones particulares de esa moneda u noyicias a nivel mundial que puedan afectar esa moneda.
+## Version 5b:
+* Actualizacion de VRVP.
